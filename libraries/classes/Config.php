@@ -374,7 +374,10 @@ class Config
             if ($_SESSION['is_git_revision']) {
                 $this->set('PMA_VERSION_GIT', 1);
             }
+        $git_location = '';
+        if (isset($_SESSION['git_location'])) {    
             $git_location = $_SESSION['git_location'];
+        }
             return $_SESSION['is_git_revision'];
         }
         // find out if there is a .git folder
